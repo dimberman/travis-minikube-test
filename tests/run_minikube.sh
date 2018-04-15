@@ -21,6 +21,8 @@ export MINIKUBE_WANTUPDATENOTIFICATION=false
 export MINIKUBE_WANTREPORTERRORPROMPT=false
 export CHANGE_MINIKUBE_NONE_USER=true
 
+cd $_MY_DIR
+
 rm -rf tmp
 mkdir -p bin tmp
 if [[ ! -x bin/kubectl ]]; then
@@ -72,5 +74,5 @@ echo "your path is ${PATH}"
 _MINIKUBE="sudo PATH=$PATH bin/minikube"
 
 $_MINIKUBE config set bootstrapper localkube
-$_MINIKUBE start --kubernetes-version=${_KUBERNETES_VERSION}  ${_VM_DRIVER:-}
+$_MINIKUBE start --kubernetes-version=${_KUBERNETES_VERSION}  --vm-driver=none
 $_MINIKUBE update-context
