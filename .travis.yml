@@ -4,4 +4,4 @@ env:
   - USE_MINIKUBE_DRIVER_NONE=true USE_SUDO_MINIKUBE=true
 
 before_script:
-- run_minikube.sh
+- tests/run_minikube.sh
