@@ -41,6 +41,8 @@ if [[ ! -x bin/helm ]]; then
   (cd tmp; tar xfz helm.tar.gz; mv ${_MY_OS}-amd64/helm ${_MY_DIR}/bin)
 fi
 
+export PATH="${_MY_DIR}/bin:$PATH"
+
 
 _MINIKUBE="sudo PATH=$PATH bin/minikube"
 
