@@ -1,4 +1,5 @@
 sudo: required
+language: python
 
 env:
 - CHANGE_MINIKUBE_NONE_USER=true
