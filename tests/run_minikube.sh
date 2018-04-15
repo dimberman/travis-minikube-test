@@ -34,15 +34,11 @@ if [[ ! -x bin/minikube ]]; then
     https://storage.googleapis.com/minikube/releases/${_MINIKUBE_VERSION}/minikube-${_MY_OS}-amd64
   chmod +x bin/minikube
 fi
-if [[ ! -x bin/helm ]]; then
-  echo Downloading helm
-  curl -Lo tmp/helm.tar.gz  \
-    https://storage.googleapis.com/kubernetes-helm/helm-${_HELM_VERSION}-${_MY_OS}-amd64.tar.gz
-  (cd tmp; tar xfz helm.tar.gz; mv ${_MY_OS}-amd64/helm ${_MY_DIR}/bin)
-fi
 
 export PATH="${_MY_DIR}/bin:$PATH"
 
+
+echo "your path is ${PATH}"
 
 _MINIKUBE="sudo PATH=$PATH bin/minikube"
 
