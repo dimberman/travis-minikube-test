@@ -1,4 +1,5 @@
 sudo: required
+language: python
 
 env:
   - USE_MINIKUBE_DRIVER_NONE=true USE_SUDO_MINIKUBE=true
