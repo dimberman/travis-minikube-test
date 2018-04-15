@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+#!/usr/bin/env bash
+
 _MY_SCRIPT="${BASH_SOURCE[0]}"
 _MY_DIR=$(cd "$(dirname "$_MY_SCRIPT")" && pwd)
 # Avoids 1.7.x because of https://github.com/kubernetes/minikube/issues/2240
 _KUBERNETES_VERSION=v1.9.4
-_MINIKUBE_VERSION=v0.25.2
+_MINIKUBE_VERSION="${KUBERNETES_VERSION}"
 _HELM_VERSION=v2.8.1
 _VM_DRIVER=none
 USE_MINIKUBE_DRIVER_NONE=true
